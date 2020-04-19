@@ -1,0 +1,34 @@
+<div *ngIf="agency">
+  <h2>Agencia {{ agency.agencia | uppercase }}</h2>
+  <div>
+    <div class="form_details">
+      <label
+        >Nombre:
+        <input [(ngModel)]="agency.agencia" placeholder="name" />
+      </label>
+      <label
+        >Distrito:
+        <input [(ngModel)]="agency.distrito" placeholder="name" />
+      </label>
+      <label
+        >Provincia:
+        <input [(ngModel)]="agency.provincia" placeholder="name" />
+      </label>
+      <label
+        >Departamento:
+        <input [(ngModel)]="agency.departamento" placeholder="name" />
+      </label>
+      <label
+        >Dirección:
+        <input [(ngModel)]="agency.direccion" placeholder="name" />
+      </label>
+    </div>
+    <div class="form_map">
+        <google-map width="600" height="400">
+            <map-marker>
+            </map-marker> 
+        </google-map>     
+    </div>
+  </div>
+  <button (click)="goBack()">Regresar</button>
+</div>

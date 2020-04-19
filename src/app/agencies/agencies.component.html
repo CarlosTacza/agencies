@@ -1,0 +1,8 @@
+<h2>My Agencies</h2>
+<ul class="agencies">
+  <li *ngFor="let agency of agencies">
+    <a routerLink="/detail/{{ agency.id }}">
+      <span class="badge">{{ agency.id }}</span> {{ agency.agencia }}
+    </a>
+  </li>
+</ul>
